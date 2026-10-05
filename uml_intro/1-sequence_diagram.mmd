@@ -1,0 +1,11 @@
+sequenceDiagram
+    autonumber
+    participant User
+    participant Library
+    participant Book
+    User->>Library: requests to create a loan
+    Library->>Book: mark as unavailable
+    create participant Loan
+    Library->>Loan: create loan
+    
+    Library-->>User: loan created
